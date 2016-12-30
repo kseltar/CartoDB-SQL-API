@@ -175,7 +175,7 @@ it('null geometries in geojson output', function(done){
 it('stream response handle errors', function(done) {
     assert.response(server, {
         url: '/api/v1/sql?' + querystring.stringify({
-            q: "SELECTT 1 as gid, null::geometry as the_geom ",
+            q: "SELECT 1 as gid, null::geometry as the_geom ",
             format: 'geojson'
         }),
         headers: {host: 'vizzuality.cartodb.com'},
